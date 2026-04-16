@@ -23,7 +23,7 @@ def main():
         ]
     )
 
-    print(response.choices[0].message)from openai import OpenAI
+    print(response.choices[0].message.content)
 
     client = OpenAI(
         api_key="GEMINI_API_KEY",
@@ -44,7 +44,7 @@ def main():
         ]
     )
 
-    print(response.choices[0].message)
+    print(response.choices[0].message.content)
 
 if __name__ == "__main__":
     main()

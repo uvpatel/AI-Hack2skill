@@ -13,6 +13,4 @@ env
 data
 notebooks
 tests
-README.md
 docker-compose.yml
-Dockerfile

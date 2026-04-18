@@ -10,7 +10,7 @@ RUN apt-get update \
 	&& apt-get install -y --no-install-recommends build-essential gcc libgomp1 \
 	&& rm -rf /var/lib/apt/lists/*
 
-COPY pyproject.toml README.md ./
+COPY pyproject.toml ./
 COPY main.py ./main.py
 COPY api ./api
 COPY config ./config
@@ -20,7 +20,6 @@ COPY scripts ./scripts
 COPY services ./services
 COPY tools ./tools
 COPY utils ./utils
-COPY worker ./worker
 
 RUN pip install --upgrade pip \
 	&& pip install fastapi google-genai numpy openai pandas seaborn streamlit tensorflow
